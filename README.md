@@ -37,3 +37,6 @@ Place the following ontology files in `src/ontology/used_ontologies/`:
 Run the ontology creation script:
 ```bash
 python src/python/create_ontology.py
+
+## Contact
+We welcome contributions and feedback! For any inquiries, suggestions, or issues related to this ontology, please contact:
