@@ -25,6 +25,7 @@ The ontology enables:
 - owlready2 >= 0.23 (`pip install owlready2`)
 - pandas >= 1.0 (for potential data integration)
 
+
 ## How to Use
 
 ### 1. Prepare Ontology Files
@@ -35,8 +36,13 @@ Place the following ontology files in `src/ontology/used_ontologies/`:
 
 ### 2. Generate the Anomaly Ontology
 Run the ontology creation script:
-```bash
+
 python src/python/create_ontology.py
+
 
 ## Contact
 We welcome contributions and feedback! For any inquiries, suggestions, or issues related to this ontology, please contact:
+
+
+
+
