@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/MON/time.owl#"
+     xml:base="https://w3id.org/MON/time.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/MON/time.owl">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl"/>
+        <dc:description rdf:resource="https://raw.githubusercontent.com/luigi-asprino/MON/main/src/Time.png"/>
+        <dc:description xml:lang="en">This ontology provides a vocabulary for expressing time. It is a simplified version of the W3C&apos;s Time Ontology.
+
+&lt;b&gt;Example Of Usage&lt;/b&gt;
+
+Representing a day, e.g. April 23 2015, as an interval.
+
+&lt;pre&gt;
+@prefix time: &amp;#60;https://w3id.org/MON/time.owl#&amp;#62;
+
+:April23015Beg a time:Instant ;
+   time:inXSDDateTime &quot;2015-04-23T00:00:00+02:00&quot; .
+
+
+:April23015End a time:Instant ;
+   time:inXSDDateTime &quot;2015-04-23T23:59:00+02:00&quot; .
+
+:April23015 a time:Interval ;
+   time:hasBeginning :April23015Beg ;
+   time:hasEnd  :April23015End .
+&lt;/pre&gt;
+
+
+&lt;b&gt;References&lt;/b&gt;
+
+- W3C&apos;s Time Ontology https://www.w3.org/TR/owl-time/</dc:description>
+        <dc:title xml:lang="en">Time Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#atTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl#hasRegion"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">It associates something with a temporal entity (for any reason).</rdfs:comment>
+        <rdfs:label xml:lang="en">at time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#hasBeginning -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#hasBeginning">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl#hasRegion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">It associates an Interval with the Instant when it begins.</rdfs:comment>
+        <rdfs:label xml:lang="en">has beginning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#hasEnd -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/MON/time.owl#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl#hasRegion"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:range rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:comment xml:lang="en">It associates an Interval with the Instant when it ends.</rdfs:comment>
+        <rdfs:label xml:lang="en">has end</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#inXSDDateTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/MON/time.owl#inXSDDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl#hasRegionDataValue"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>in XSD date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#Instant -->
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#Instant">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/MON/time.owl#Interval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#inXSDDateTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A very short segment of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#Interval -->
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#Interval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/MON/time.owl#TemporalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#hasBeginning"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/MON/time.owl#hasEnd"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/MON/time.owl#Instant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A segment of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/MON/time.owl#TemporalEntity -->
+
+    <owl:Class rdf:about="https://w3id.org/MON/time.owl#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL_v34.owl#TimeInterval"/>
+        <rdfs:comment xml:lang="en">This class represents any entity describing a time period.</rdfs:comment>
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
+

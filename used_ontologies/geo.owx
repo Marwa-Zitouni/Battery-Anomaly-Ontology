@@ -1,0 +1,3311 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.opengis.net/ont/geosparql"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.opengis.net/ont/geosparql"
+     versionIRI="http://www.opengis.net/ont/geosparql/1.1">
+    <Prefix name="" IRI="http://www.opengis.net/ont/geosparql#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="sdo" IRI="https://schema.org/"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="spec11" IRI="http://www.opengis.net/spec/geosparql/1.1/specification.html#"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489114"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489119"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:created"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2020-09-09</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+        <Literal>OGC GeoSPARQL Standards Working Group</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+        <Literal xml:lang="en">An RDF/OWL vocabulary for representing spatial information</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2023-11-16</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ogc.org/license</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2024-01-12</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:publisher"/>
+        <AnonymousIndividual nodeID="_:genid2147489112"/>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:replaces"/>
+        <IRI>/1.0</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+        <Literal>(c) 2023 Open Geospatial Consortium</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:source"/>
+        <IRI>http://www.opengis.net/doc/IS/geosparql/1.1</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+        <Literal>GeoSPARQL Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.opengis.net/doc/IS/geosparql/1.1</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>1.1</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Feature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FeatureCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GeometryCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpatialObjectCollection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#defaultGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehContains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehCovers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehDisjoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehEquals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehInside"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehMeet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ehOverlap"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArea"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCentroid"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDefaultGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLength"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPerimeterLength"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSize"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpatialAccuracy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSpatialResolution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasVolume"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8dc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ec"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8eq"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8po"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8tpp"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rcc8tppi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfContains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfCrosses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfDisjoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfEquals"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfIntersects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfOverlaps"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfTouches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sfWithin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asDGGS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asGML"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asGeoJSON"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asKML"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#asWKT"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#coordinateDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricArea"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricPerimeterLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricSpatialAccuracy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricSpatialResolution"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMetricVolume"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSerialization"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isEmpty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isSimple"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spatialDimension"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#dggsLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#geoJSONLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#gmlLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#kmlLiteral"/>
+    </Declaration>
+    <Declaration>
+        <Datatype IRI="#wktLiteral"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sdo:Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:replaces"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:modified"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:created"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sdo:Organization"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:license"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Container"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dcterms:source"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="rdfs:member"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Feature"/>
+        <Class IRI="#SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeatureCollection"/>
+        <Class IRI="#SpatialObjectCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FeatureCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rdfs:member"/>
+            <Class IRI="#Feature"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Geometry"/>
+        <Class IRI="#SpatialObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometryCollection"/>
+        <Class IRI="#SpatialObjectCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GeometryCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rdfs:member"/>
+            <Class IRI="#Geometry"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpatialObjectCollection"/>
+        <Class abbreviatedIRI="rdfs:Container"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpatialObjectCollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="rdfs:member"/>
+            <Class IRI="#SpatialObject"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Feature"/>
+        <Class IRI="#Geometry"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Organization"/>
+        <AnonymousIndividual nodeID="_:genid2147489112"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489114"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489119"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="sdo:Person"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+    </ClassAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <ObjectProperty IRI="#hasDefaultGeometry"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#ehDisjoint"/>
+        <ObjectProperty IRI="#sfDisjoint"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#ehEquals"/>
+        <ObjectProperty IRI="#sfEquals"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#ehMeet"/>
+        <ObjectProperty IRI="#sfTouches"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasArea"/>
+        <ObjectProperty IRI="#hasSize"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCentroid"/>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDefaultGeometry"/>
+        <ObjectProperty IRI="#hasGeometry"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLength"/>
+        <ObjectProperty IRI="#hasSize"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPerimeterLength"/>
+        <ObjectProperty IRI="#hasSize"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasVolume"/>
+        <ObjectProperty IRI="#hasSize"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehCovers"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehInside"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehMeet"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ehOverlap"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasArea"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCentroid"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDefaultGeometry"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Feature"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLength"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPerimeterLength"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSize"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpatialAccuracy"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSpatialResolution"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasVolume"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8dc"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ec"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8eq"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8po"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8tpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rcc8tppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfCrosses"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfIntersects"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfOverlaps"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfTouches"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sfWithin"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#defaultGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehCoveredBy"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehCovers"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehInside"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehMeet"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ehOverlap"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBoundingBox"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCentroid"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDefaultGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasGeometry"/>
+        <Class IRI="#Geometry"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8dc"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ec"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8eq"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ntpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8ntppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8po"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8tpp"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rcc8tppi"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfContains"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfCrosses"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfDisjoint"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfEquals"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfIntersects"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfOverlaps"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfTouches"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sfWithin"/>
+        <Class IRI="#SpatialObject"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asDGGS"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asGML"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asGeoJSON"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asKML"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#asWKT"/>
+        <DataProperty IRI="#hasSerialization"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMetricArea"/>
+        <DataProperty IRI="#hasMetricSize"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMetricLength"/>
+        <DataProperty IRI="#hasMetricSize"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMetricPerimeterLength"/>
+        <DataProperty IRI="#hasMetricSize"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasMetricVolume"/>
+        <DataProperty IRI="#hasMetricSize"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asDGGS"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asGML"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asGeoJSON"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asKML"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#asWKT"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#coordinateDimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricArea"/>
+        <Class IRI="#SpatialObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricLength"/>
+        <Class IRI="#SpatialObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricPerimeterLength"/>
+        <Class IRI="#SpatialObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricSize"/>
+        <Class IRI="#SpatialObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricSpatialAccuracy"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricSpatialResolution"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasMetricVolume"/>
+        <Class IRI="#SpatialObject"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSerialization"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isEmpty"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isSimple"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#spatialDimension"/>
+        <Class IRI="#Geometry"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#asDGGS"/>
+        <Datatype IRI="#dggsLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#asGML"/>
+        <Datatype IRI="#gmlLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#asGeoJSON"/>
+        <Datatype IRI="#geoJSONLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#asKML"/>
+        <Datatype IRI="#kmlLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#asWKT"/>
+        <Datatype IRI="#wktLiteral"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#coordinateDimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricArea"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricLength"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricPerimeterLength"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricSize"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricSpatialAccuracy"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricSpatialResolution"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasMetricVolume"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSerialization"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isEmpty"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isSimple"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#spatialDimension"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feature</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feature</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/core/feature-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Feature</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">A discrete spatial phenomenon in a universe of discourse.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.5</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.7</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.8</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.9</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Feature</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">A Feature represents a uniquely identifiable phenomenon, for example a river or an apple. While such phenomena (and therefore the Features used to represent them) are bounded, their boundaries may be crisp (e.g., the declared boundaries of a state), vague (e.g., the delineation of a valley versus its neighboring mountains), and change with time (e.g., a storm front). While discrete in nature, Features may be created from continuous observations, such as an isochrone that determines the region that can be reached by ambulance within 5 minutes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#Feature</IRI>
+        <Literal xml:lang="en">Feature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FeatureCollection</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#FeatureCollection</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/core/feature-collection-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#FeatureCollection</IRI>
+        <Literal xml:lang="en">A collection of individual Features.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#FeatureCollection</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#FeatureCollection</IRI>
+        <Literal xml:lang="en">Feature Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Geometry</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Geometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Geometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.5</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.8</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#Geometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">Geometry can be used as a representation of the shape, extent or location of a Feature and may exist as a self-contained entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#Geometry</IRI>
+        <Literal xml:lang="en">Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#GeometryCollection</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#GeometryCollection</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/core/geometry-collection-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#GeometryCollection</IRI>
+        <Literal xml:lang="en">A collection of individual Geometries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#GeometryCollection</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.7</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#GeometryCollection</IRI>
+        <Literal xml:lang="en">Geometry Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObject</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObject</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/core/spatial-object-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObject</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">Anything spatial (being or having a shape, position or an extent).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#SpatialObject</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.1.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#SpatialObject</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.1.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">Subclasses of this class are expected to be used for instance data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#SpatialObject</IRI>
+        <Literal xml:lang="en">Spatial Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObjectCollection</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#SpatialObjectCollection</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-collection-class</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#SpatialObjectCollection</IRI>
+        <Literal xml:lang="en">A collection of individual Spatial Objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#SpatialObjectCollection</IRI>
+        <Literal xml:lang="en">This is the superclass of Feature Collection and Geometry Collection.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#SpatialObjectCollection</IRI>
+        <Literal xml:lang="en">Spatial Object Collection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asDGGS</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asDGGS</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-dggs-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asDGGS</IRI>
+        <Literal xml:lang="en">The Discrete Global Grid System (DGGS) serialization of a Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asDGGS</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asDGGS</IRI>
+        <Literal xml:lang="en">as DGGS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGML</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGML</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-gml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGML</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-gml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">The GML serialization of a Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asGML</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asGML</IRI>
+        <Literal xml:lang="en">as GML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGeoJSON</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asGeoJSON</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-geojson-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#asGeoJSON</IRI>
+        <IRI>https://tools.ietf.org/html/rfc7946</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asGeoJSON</IRI>
+        <Literal xml:lang="en">The GeoJSON serialization of a Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asGeoJSON</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asGeoJSON</IRI>
+        <Literal xml:lang="en">as GeoJSON</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asKML</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asKML</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-kml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#asKML</IRI>
+        <IRI>https://www.ogc.org/standards/kml</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asKML</IRI>
+        <Literal xml:lang="en">The KML serialization of a Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asKML</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asKML</IRI>
+        <Literal xml:lang="en">as KML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asWKT</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asWKT</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-wkt-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#asWKT</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-wkt-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">The WKT serialization of a Geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.5</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.8</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.2.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#asWKT</IRI>
+        <AbbreviatedIRI>spec11:C.2.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#asWKT</IRI>
+        <Literal xml:lang="en">as WKT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#coordinateDimension</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#coordinateDimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">The number of measurements or axes needed to describe the position of this Geometry in a coordinate system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#coordinateDimension</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#coordinateDimension</IRI>
+        <Literal xml:lang="en">coordinate dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defaultGeometry</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#defaultGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#defaultGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#defaultGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.2.1</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#defaultGeometry</IRI>
+        <Literal xml:lang="en">default geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dggsLiteral</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dggsLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/dggs-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#dggsLiteral</IRI>
+        <IRI>http://www.opengis.net/doc/AS/dggs/2.0</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#dggsLiteral</IRI>
+        <Literal xml:lang="en">A textual serialization of a Discrete Global Grid (DGGS) Geometry object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#dggsLiteral</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#dggsLiteral</IRI>
+        <Literal> &quot;&lt;https://w3id.org/dggs/auspix&gt; OrdinateList (R3234)&quot;^^&lt;http://www.opengis.net/ont/geosparql#dggsLiteral&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#dggsLiteral</IRI>
+        <Literal xml:lang="en">DGGS Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>#dggsLiteral</IRI>
+        <Literal xml:lang="en">This datatype is not expected to be used directly but to serve as an abstract datatype for a series of specific DGGS literal types, for specific DGGS implementations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dimension</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#dimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#dimension</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehContains</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehContains</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*TFF*FF*</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehCoveredBy</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFF*TFT**</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehCoveredBy</IRI>
+        <Literal xml:lang="en">covered by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCovers</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCovers</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehCovers</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehCovers</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: T*TFT*FF*</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehCovers</IRI>
+        <Literal xml:lang="en">covers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehDisjoint</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehEquals</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehEquals</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehInside</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehInside</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehInside</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehInside</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFF*FFT**</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehInside</IRI>
+        <Literal xml:lang="en">inside</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehMeet</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehMeet</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehMeet</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehMeet</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehMeet</IRI>
+        <Literal xml:lang="en">meet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#ehOverlap</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#ehOverlap</IRI>
+        <Literal xml:lang="en">overlap</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geojson-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <IRI>https://tools.ietf.org/html/rfc7946</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <Literal xml:lang="en">A GeoJSON serialization of a Geometry object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#geoJSONLiteral</IRI>
+        <Literal xml:lang="en">GeoJSON Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/gml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/gml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#gmlLiteral</IRI>
+        <IRI>https://portal.ogc.org/files/?artifact_id=20509</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">A GML serialization of a Geometry object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#gmlLiteral</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#gmlLiteral</IRI>
+        <Literal xml:lang="en">GML Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasArea</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasArea</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasArea</IRI>
+        <Literal xml:lang="en">The area of a Spatial Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasArea</IRI>
+        <Literal xml:lang="en">has area</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasBoundingBox</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasBoundingBox</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasBoundingBox</IRI>
+        <Literal xml:lang="en">The minimum or smallest bounding or enclosing box of a given Feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasBoundingBox</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasBoundingBox</IRI>
+        <Literal xml:lang="en">has bounding box</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>#hasBoundingBox</IRI>
+        <Literal xml:lang="en">The target is a Geometry that defines a rectilinear region whose edges are aligned with the axes of the coordinate reference system, which exactly contains the Feature, for example an instance of http://www.opengis.net/ont/sf#envelope.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCentroid</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasCentroid</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasCentroid</IRI>
+        <Literal xml:lang="en">The arithmetic mean position of all the Geometry points of a given Feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasCentroid</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasCentroid</IRI>
+        <Literal xml:lang="en">has centroid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>#hasCentroid</IRI>
+        <Literal xml:lang="en">The target Geometry shall describe a point, for example an instance of http://www.opengis.net/ont/sf#Point.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <Literal xml:lang="en">The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <Literal xml:lang="en">Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasDefaultGeometry</IRI>
+        <Literal xml:lang="en">has default geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasGeometry</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasGeometry</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">A spatial representation for a given Feature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.5</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.8</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasGeometry</IRI>
+        <AbbreviatedIRI>spec11:C.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasGeometry</IRI>
+        <Literal xml:lang="en">has geometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasLength</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasLength</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasLength</IRI>
+        <Literal xml:lang="en">The length of a Spatial Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasLength</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.7</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasLength</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasLength</IRI>
+        <Literal xml:lang="en">has length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricArea</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricArea</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricArea</IRI>
+        <Literal xml:lang="en">The area of a Spatial Object in square meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.9</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.3.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricArea</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricArea</IRI>
+        <Literal xml:lang="en">has area in square meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricLength</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricLength</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricLength</IRI>
+        <Literal xml:lang="en">The length of a Spatial Object in meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricLength</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricLength</IRI>
+        <Literal xml:lang="en">has length in meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricPerimeterLength</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricPerimeterLength</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricPerimeterLength</IRI>
+        <Literal xml:lang="en">The length of the perimeter of a Spatial Object in meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricPerimeterLength</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.1.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricPerimeterLength</IRI>
+        <Literal xml:lang="en">has perimeter length in meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSize</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSize</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricSize</IRI>
+        <Literal xml:lang="en">Subproperties of this property are used to indicate the size of a Spatial Object, as a measurement or estimate of one or more dimensions of the Spatial Object&apos;s spatial presence. Units are always metric (meter, square meter or cubic meter).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricSize</IRI>
+        <Literal xml:lang="en">has metric size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <Literal xml:lang="en">The positional accuracy of the coordinates of a Geometry in meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <Literal xml:lang="en">Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricSpatialAccuracy</IRI>
+        <Literal xml:lang="en">has spatial accuracy in meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <Literal xml:lang="en">The spatial resolution of a Geometry in meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.6</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <Literal xml:lang="en">Spatial resolution specifies the level of detail of a Geometry. It the smallest dinstinguishable distance between spatially adjacent coordinates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricSpatialResolution</IRI>
+        <Literal xml:lang="en">has spatial resolution in meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricVolume</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasMetricVolume</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasMetricVolume</IRI>
+        <Literal xml:lang="en">The volume of a Spatial Object in cubic meters.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricVolume</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.2.9</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasMetricVolume</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasMetricVolume</IRI>
+        <Literal xml:lang="en">has volume in cubic meters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasPerimeterLength</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasPerimeterLength</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasPerimeterLength</IRI>
+        <Literal xml:lang="en">The length of the perimeter of a Spatial Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasPerimeterLength</IRI>
+        <AbbreviatedIRI>spec11:C.1.1.1.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasPerimeterLength</IRI>
+        <Literal xml:lang="en">has perimeter length</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSerialization</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSerialization</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSerialization</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">Connects a Geometry object with its text-based serialization.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasSerialization</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasSerialization</IRI>
+        <Literal xml:lang="en">has serialization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSize</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSize</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSize</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasSize</IRI>
+        <Literal xml:lang="en">Subproperties of this property are used to indicate the size of a Spatial Object as a measurement or estimate of one or more dimensions of the Spatial Object&apos;s spatial presence.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasSize</IRI>
+        <Literal xml:lang="en">The recommended way to specify size is by using a subproperty of hasMetricSize. Subproperties of hasSize can be used if more complex expressions are necessary, for example if the unit of length can not be converted to meter, or if additional data are needed to describe the measurement or estimate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasSize</IRI>
+        <Literal xml:lang="en">has size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <Literal xml:lang="en">The positional accuracy of the coordinates of a Geometry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <Literal xml:lang="en">Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasSpatialAccuracy</IRI>
+        <Literal xml:lang="en">has spatial accuracy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <Literal xml:lang="en">The spatial resolution of a Geometry.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <Literal xml:lang="en">Spatial resolution specifies the level of detail of a Geometry. It the smallest distinguishable distance between spatially adjacent coordinates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasSpatialResolution</IRI>
+        <Literal xml:lang="en">has spatial resolution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasVolume</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#hasVolume</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#hasVolume</IRI>
+        <Literal xml:lang="en">The volume of a three-dimensional Spatial Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#hasVolume</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#hasVolume</IRI>
+        <Literal xml:lang="en">has volume</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEmpty</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEmpty</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isEmpty</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#isEmpty</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#isEmpty</IRI>
+        <Literal xml:lang="en">is empty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSimple</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSimple</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#isSimple</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#isSimple</IRI>
+        <IRI>https://portal.ogc.org/files/?artifact_id=25355</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#isSimple</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#isSimple</IRI>
+        <Literal xml:lang="en">is simple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#kmlLiteral</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#kmlLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/kml-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#kmlLiteral</IRI>
+        <IRI>https://www.ogc.org/standards/kml/</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#kmlLiteral</IRI>
+        <Literal xml:lang="en">A KML serialization of a Geometry object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#kmlLiteral</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.4</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#kmlLiteral</IRI>
+        <Literal xml:lang="en">KML Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8dc</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FFTFFTTTT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8dc</IRI>
+        <Literal xml:lang="en">disconnected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8ec</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FFTFTTTTT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ec</IRI>
+        <Literal xml:lang="en">externally connected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8eq</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8eq</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8ntpp</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFFTFFTTT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ntpp</IRI>
+        <Literal xml:lang="en">non-tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8ntppi</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: TTTFFTFFT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8ntppi</IRI>
+        <Literal xml:lang="en">non-tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8po</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8po</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8po</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8po</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: TTTTTTTTT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8po</IRI>
+        <Literal xml:lang="en">partially overlapping</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8tpp</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFFTTFTTT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8tpp</IRI>
+        <Literal xml:lang="en">tangential proper part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#rcc8tppi</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: TTTFTTFFT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#rcc8tppi</IRI>
+        <Literal xml:lang="en">tangential proper part inverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfContains</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfContains</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfContains</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfContains</IRI>
+        <Literal xml:lang="en">contains</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfCrosses</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially crosses the object SpatialObject. DE-9IM: T*T******</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfCrosses</IRI>
+        <Literal xml:lang="en">crosses</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfDisjoint</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfDisjoint</IRI>
+        <Literal xml:lang="en">disjoint</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfEquals</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfEquals</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfEquals</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfEquals</IRI>
+        <Literal xml:lang="en">equals</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfIntersects</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is not spatially disjoint from the object SpatialObject. DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T****</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfIntersects</IRI>
+        <Literal xml:lang="en">intersects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfOverlaps</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfOverlaps</IRI>
+        <Literal xml:lang="en">overlaps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfTouches</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfTouches</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfTouches</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfTouches</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject spatially touches the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfTouches</IRI>
+        <Literal xml:lang="en">touches</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfWithin</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfWithin</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#sfWithin</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#sfWithin</IRI>
+        <IRI>http://dbpedia.org/resource/DE-9IM</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#sfWithin</IRI>
+        <Literal xml:lang="en">within</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#spatialDimension</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#spatialDimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#spatialDimension</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#spatialDimension</IRI>
+        <AbbreviatedIRI>spec11:C.1.2.3</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#spatialDimension</IRI>
+        <Literal xml:lang="en">spatial dimension</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI>#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/wkt-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI>http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/wkt-literal</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#wktLiteral</IRI>
+        <IRI>https://portal.ogc.org/files/?artifact_id=25355</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">A Well-known Text serialization of a Geometry object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>#wktLiteral</IRI>
+        <AbbreviatedIRI>spec11:C.2.2.2</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>#wktLiteral</IRI>
+        <Literal xml:lang="en">Well-known Text Literal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489112"/>
+        <Literal>Open Geospatial Consortium</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489112"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ogc.org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+        <Literal>Oracle Corporation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+        <Literal>matthew.perry@oracle.com</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+        <Literal>Matthew Perry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489113"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0003-1988-462X</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489114"/>
+        <Literal>Oracle Corporation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489114"/>
+        <Literal>john.herring@oracle.com</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489114"/>
+        <Literal>John Herring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal>Australian National University</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal>KurrawongAI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal>SURROUND Australia Pty Ltd</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal>nick@kurrawong.ai</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal>Nicholas J. Car</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489115"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-8742-7730</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+        <Literal>Geoscape Australia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+        <Literal>joseph.abhayaratna@geoscape.com.au</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+        <Literal>Joseph Abhayaratna</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489116"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0001-5075-6234</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+        <Literal>Mainz University Of Applied Sciences</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+        <Literal>timo.homburg@hs-mainz.de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+        <Literal>Timo Homburg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489117"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-9499-5840</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+        <Literal>CSIRO Australia</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">simon.cox@csiro.au</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+        <Literal>Simon J D Cox</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489118"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-3884-3420</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489119"/>
+        <Literal>fjknibbe@gmail.com</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489119"/>
+        <Literal>Frans Knibbe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489119"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0003-3789-2260</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+        <Literal>KU Leuven</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:affiliation"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+        <Literal>Neanex Technologies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:email"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+        <Literal>mathias.bonduel@neanex.com</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:name"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+        <Literal>Mathias Bonduel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="sdo:url"/>
+        <AnonymousIndividual nodeID="_:genid2147489120"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-3313-924X</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
