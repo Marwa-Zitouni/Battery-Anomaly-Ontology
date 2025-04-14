@@ -41,7 +41,7 @@ python src/python/create_ontology.py
 
 
 ## Contact
-We welcome contributions and feedback! For any inquiries, suggestions, or issues related to this ontology, please contact:
+We welcome contributions and feedback! For any inquiries, suggestions, or issues related to this ontology, please contact: marwa.zitouni@insa-strasbourg.fr
 
 
 
