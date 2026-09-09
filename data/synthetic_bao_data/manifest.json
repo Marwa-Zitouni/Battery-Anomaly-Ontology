@@ -1,0 +1,114 @@
+{
+  "dataset_name": "Synthetic BAO thermal-runaway validation dataset",
+  "synthetic": true,
+  "generator": "generate_synthetic_bao_population.py",
+  "random_seed": 20260902,
+  "time_series": {
+    "file": "synthetic_bao_data/time_series/synthetic_battery_timeseries.csv",
+    "rows": 1801,
+    "sampling_interval_s": 0.1,
+    "start_time_s": 0.0,
+    "end_time_s": 180.0,
+    "sha256": "7e8afaa7cc589c74c43395ac53c044f92b82c7dcc2347f0d69c6ed22997adc26",
+    "values_at_event_onsets": {
+      "110.0": {
+        "pump_current_A": 0.0,
+        "ambient_temperature_C": 24.499848261328356
+      },
+      "120.0": {
+        "surface_left_sensor_C": 76.18837218153924,
+        "ambient_temperature_C": 24.46603329751013
+      },
+      "132.0": {
+        "surface_left_true_C": 133.92387719367377,
+        "surface_left_sensor_C": 145.92387719367377,
+        "ambient_temperature_C": 24.429318539946536,
+        "cell_mean_temperature_C": 35.404773543294276
+      }
+    }
+  },
+  "thermal_frames": {
+    "110.0": {
+      "time_s": 110.0,
+      "image": "synthetic_bao_data/thermal_images/thermal_110.0s.png",
+      "temperature_matrix": "synthetic_bao_data/thermal_images/thermal_110.0s_temperature_matrix.csv",
+      "width_px": 128,
+      "height_px": 96,
+      "min_temperature_C": 27.5,
+      "mean_temperature_C": 28.390121875000002,
+      "max_temperature_C": 35.68,
+      "core_temperature_C": 35.68,
+      "propagation_temperature_C": 31.96,
+      "image_sha256": "20444beaacd01f9515a0a320aac0993b3564dfac730d7cfa9ff5e883ee9e2ab6",
+      "matrix_sha256": "b3ff409ef08a807f9390ea7f94a35bfa70b0f8b1d8768ff00f86f522295bd811"
+    },
+    "120.0": {
+      "time_s": 120.0,
+      "image": "synthetic_bao_data/thermal_images/thermal_120.0s.png",
+      "temperature_matrix": "synthetic_bao_data/thermal_images/thermal_120.0s_temperature_matrix.csv",
+      "width_px": 128,
+      "height_px": 96,
+      "min_temperature_C": 27.5,
+      "mean_temperature_C": 31.578599178059893,
+      "max_temperature_C": 81.5891,
+      "core_temperature_C": 81.5891,
+      "propagation_temperature_C": 53.3236,
+      "image_sha256": "4f3e420a0664ae5885e606a1e2d5a259574391372ed324df8ad1b527bab4810d",
+      "matrix_sha256": "45ad53c3da9506473e764571adac4218231996dfd305df21ce51db8c87a532dd"
+    },
+    "132.0": {
+      "time_s": 132.0,
+      "image": "synthetic_bao_data/thermal_images/thermal_132.0s.png",
+      "temperature_matrix": "synthetic_bao_data/thermal_images/thermal_132.0s_temperature_matrix.csv",
+      "width_px": 128,
+      "height_px": 96,
+      "min_temperature_C": 27.5,
+      "mean_temperature_C": 35.404773543294276,
+      "max_temperature_C": 136.68,
+      "core_temperature_C": 136.68,
+      "propagation_temperature_C": 78.96,
+      "image_sha256": "bc3b29cbacc36bea0501c5bccfcae4a7ee9c0c98e1bda6b2f3ff3435472ec135",
+      "matrix_sha256": "5346d0edbba20a4f44eec259b24a18ac3f352399feded4b5e832e51de6b8e831"
+    },
+    "144.0": {
+      "time_s": 144.0,
+      "image": "synthetic_bao_data/thermal_images/thermal_144.0s.png",
+      "temperature_matrix": "synthetic_bao_data/thermal_images/thermal_144.0s_temperature_matrix.csv",
+      "width_px": 128,
+      "height_px": 96,
+      "min_temperature_C": 27.5,
+      "mean_temperature_C": 35.404773543294276,
+      "max_temperature_C": 136.68,
+      "core_temperature_C": 136.68,
+      "propagation_temperature_C": 78.96,
+      "image_sha256": "bc3b29cbacc36bea0501c5bccfcae4a7ee9c0c98e1bda6b2f3ff3435472ec135",
+      "matrix_sha256": "5346d0edbba20a4f44eec259b24a18ac3f352399feded4b5e832e51de6b8e831"
+    }
+  },
+  "events": [
+    {
+      "id": "CoolantPumpFailure_Event_001",
+      "start_s": 110.0,
+      "end_s": 150.0
+    },
+    {
+      "id": "ThermalRunaway_Event_001",
+      "start_s": 120.0,
+      "end_s": 150.0
+    },
+    {
+      "id": "TemperatureSensorBias_Event_001",
+      "start_s": 132.0,
+      "end_s": 144.0
+    }
+  ],
+  "ontology": {
+    "source_ontology": "BAO_populated.owl",
+    "removed_source_individuals": 45,
+    "retained_tbox_triples": 1163,
+    "output_ontology": "BAO_synthetic_populated.owl",
+    "output_triples": 1379,
+    "output_named_individuals": 33,
+    "sha256": "0154e2c6a37c615c68158a6607fde7d7dd1c2eabf8b76caf8c5d301d65adcfa2"
+  }
+}

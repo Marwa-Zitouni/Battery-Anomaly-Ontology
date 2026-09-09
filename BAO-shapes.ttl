@@ -1,0 +1,211 @@
+@prefix bao: <http://www.battery-ontology.org/liBatteryFault#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Application-level constraints complementing BAO's open-world OWL axioms.
+
+bao:SingleCellThermalRunawayShape
+    a sh:NodeShape ;
+    sh:targetClass bao:SingleCellThermalRunaway ;
+    sh:property [
+        sh:path bao:hasCause ;
+        sh:class bao:Cause ;
+        sh:minCount 1 ;
+        sh:message "A thermal-runaway occurrence must have at least one identified or candidate cause."@en
+    ] ;
+    sh:property [
+        sh:path bao:hasOnset ;
+        sh:class bao:AnomalyOnset ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A thermal-runaway occurrence must have exactly one onset."@en
+    ] ;
+    sh:property [
+        sh:path [ sh:alternativePath ( bao:hasAnomalyInterval bao:hasAnomalyDuration ) ] ;
+        sh:class bao:AnomalyDuration ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A thermal-runaway occurrence must have exactly one active interval."@en
+    ] ;
+    sh:property [
+        sh:path bao:hasAnomalyEnd ;
+        sh:class bao:TimeInstant ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A thermal-runaway occurrence must have exactly one explicit end instant."@en
+    ] ;
+    sh:property [
+        sh:path bao:hasHotspot ;
+        sh:class bao:HotspotRegion ;
+        sh:minCount 1 ;
+        sh:message "A single-cell thermal-runaway occurrence must have at least one hotspot region."@en
+    ] ;
+    sh:property [
+        sh:path bao:wasDetectedIn ;
+        sh:class bao:DetectionEvent ;
+        sh:minCount 1 ;
+        sh:message "A machine-derived thermal-runaway diagnosis must identify its detection event."@en
+    ] ;
+    sh:property [
+        sh:path bao:hasEvidence ;
+        sh:class bao:DiagnosticEvidence ;
+        sh:minCount 1 ;
+        sh:message "A thermal-runaway diagnosis must identify supporting evidence."@en
+    ] .
+
+bao:DetectionEventShape
+    a sh:NodeShape ;
+    sh:targetClass bao:DetectionEvent ;
+    sh:property [
+        sh:path bao:performedBy ;
+        sh:class bao:DetectionSystem ;
+        sh:minCount 1 ;
+        sh:message "A detection event must identify the responsible detection system."@en
+    ] ;
+    sh:property [
+        sh:path bao:usesAlgorithm ;
+        sh:class bao:DetectionAlgorithm ;
+        sh:minCount 1 ;
+        sh:message "A detection event must identify the algorithm or model it executed."@en
+    ] .
+
+bao:ConfidenceShape
+    a sh:NodeShape ;
+    sh:targetClass bao:Confidence ;
+    sh:property [
+        sh:path bao:hasConfidenceScore ;
+        sh:datatype xsd:double ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 1.0 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A Confidence node must contain exactly one xsd:double score from 0 through 1."@en
+    ] .
+
+bao:QuantityValueShape
+    a sh:NodeShape ;
+    sh:targetClass bao:QuantityValue ;
+    sh:property [
+        sh:path bao:hasNumericValue ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path bao:hasMeasurementUnit ;
+        sh:class bao:MeasurementUnit ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+bao:ImageShape
+    a sh:NodeShape ;
+    sh:targetClass bao:Image ;
+    sh:property [
+        sh:path bao:hasWidth ;
+        sh:datatype xsd:positiveInteger ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path bao:hasHeight ;
+        sh:datatype xsd:positiveInteger ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+bao:PixelCoordinateShape
+    a sh:NodeShape ;
+    sh:targetClass bao:PixelCoordinate ;
+    sh:property [
+        sh:path bao:hasXCoordinate ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path bao:hasYCoordinate ;
+        sh:datatype xsd:nonNegativeInteger ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+bao:TimeInstantShape
+    a sh:NodeShape ;
+    sh:targetClass bao:TimeInstant ;
+    sh:property [
+        sh:path bao:hasTimestamp ;
+        sh:datatype xsd:double ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] ;
+    sh:property [
+        sh:path bao:relativeToExperiment ;
+        sh:class bao:Experiment ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "An elapsed-time coordinate must identify the experiment supplying its origin."@en
+    ] .
+
+bao:AnomalyDurationShape
+    a sh:NodeShape ;
+    sh:targetClass bao:AnomalyDuration ;
+    sh:property [
+        sh:path bao:hasDurationSeconds ;
+        sh:datatype xsd:double ;
+        sh:minExclusive 0.0 ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+bao:ParthoodAcyclicShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf bao:hasDirectPart ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Direct parthood must not contain self-links or cycles."@en ;
+        sh:select """
+            PREFIX bao: <http://www.battery-ontology.org/liBatteryFault#>
+            SELECT $this WHERE { $this bao:hasDirectPart+ $this . }
+        """
+    ] .
+
+bao:DirectCauseAcyclicShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf bao:hasDirectCause ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "Direct causal assertions must not contain self-links or cycles at one occurrence granularity."@en ;
+        sh:select """
+            PREFIX bao: <http://www.battery-ontology.org/liBatteryFault#>
+            SELECT $this WHERE { $this bao:hasDirectCause+ $this . }
+        """
+    ] .
+
+bao:AdjacencyNoSelfShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf bao:isAdjacentTo ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "A component cannot be adjacent to itself."@en ;
+        sh:select """
+            PREFIX bao: <http://www.battery-ontology.org/liBatteryFault#>
+            SELECT $this WHERE { $this bao:isAdjacentTo $this . }
+        """
+    ] .
+
+bao:AnomalyTemporalOrderShape
+    a sh:NodeShape ;
+    sh:targetClass bao:Anomaly ;
+    sh:sparql [
+        a sh:SPARQLConstraint ;
+        sh:message "An anomaly end must not precede its onset on the same elapsed-time scale."@en ;
+        sh:select """
+            PREFIX bao: <http://www.battery-ontology.org/liBatteryFault#>
+            SELECT $this WHERE {
+                $this bao:hasOnset/bao:hasTimestamp ?start ;
+                      bao:hasAnomalyEnd/bao:hasTimestamp ?end .
+                FILTER (?end < ?start)
+            }
+        """
+    ] .
